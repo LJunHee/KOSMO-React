@@ -10,6 +10,7 @@ import Depts from './pages/Depts'
 import Frame from './pages/Frame'
 import Errs from './pages/Errs';
 import AddDept from './pages/AddDept';
+import Detail from './pages/Detail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
         <Route path='/intro/' element={<Intro/>}/>
         <Route path='/dept/' element={<Depts/>}/>
         <Route path='/dept/add' element={<AddDept/>}/>
+        <Route path='/dept/detail' element={<Detail/>}/>
         <Route path='/*' element={<Errs/>}/>
       </Route>
     </Routes>
