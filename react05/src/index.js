@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/bootstrap.min.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';  // @ 기호 없이import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Frame from './pages/components/Frame';
@@ -9,6 +8,7 @@ import Main from './pages/Main';
 import Intro from './pages/Intro';
 import Depts from './pages/Depts';
 import DeptAdd from './pages/DeptAdd';
+import Dept from './pages/Dept';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +21,7 @@ root.render(
           <Route path='/intro' element={<Intro/>}/>
           <Route path='/dept/' element={<Depts/>}/>
           <Route path='/dept/add' element={<DeptAdd/>}/>
+          <Route path='/dept/:deptno' element={<Dept/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
